@@ -172,8 +172,8 @@ hi, h3{
     }
 }
 
-@media screen and (max-width: 300px){
+@media screen and (max-width: 300px) {
     .weather-app{
-        min-height: 40em;
+        min-height: 30px;
     }
 }
