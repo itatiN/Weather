@@ -1,2 +1,2 @@
 # Weather
-A simple site that show weather for the day
+A responsive site that show weather for the day
