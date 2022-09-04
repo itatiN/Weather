@@ -11,17 +11,17 @@ const windOutput = document.querySelector('.wind');
 const form = document.querySelector('#locationInput');
 const search = document.querySelector('.search');
 const btn = document.querySelector('.submit');
-const cities = document.querySelector('.city')
+const cities = document.querySelectorAll('.city')
 
 let cityInput = "London";
 
-cities.forEach(city => {
+cities.forEach((city => {
     city.addEventListener('click', (e) =>{
         cityInput = e.target.innerHTML;
         fetchWeatherData();
         app.style.opacity = "0";
     });
-});
+}));
 
 form.addEventListener('submit', (e) =>{
     if(search.value.length == 0){
@@ -49,7 +49,7 @@ function dayOfTheWeek(day, month, year){
 };
 
 function fetchWeatherData(){
-    fetch(`http://api.weatherapi.com/v1/current.json?key=93505422f6124dd79b6212335220309=${cityInput}`)
+    fetch(`http://api.weatherapi.com/v1/current.json?key=APIKEY=${cityInput}`)
     .then(response => response.json())
     .then(data => {
         console.log(data);
